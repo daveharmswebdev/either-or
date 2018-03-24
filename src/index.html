@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body ng-app="app" ng-cloak>
+  <a ui-sref="hello-world" ui-sref-active="active">World</a>
+  <a ui-sref="hello-dave" ui-sref-active="active">Dave</a>
+  <a ui-sref="selection-display" ui-sref-active="active">Selection</a>
+  <a ui-sref="round-robin" ui-sref-active="active">Round Robin</a>
+
+  <ui-view></ui-view>
+
+</body>
+</html>
