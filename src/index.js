@@ -1,4 +1,5 @@
 import angular from 'angular';
+import 'bootstrap';
 import uiRouter from '@uirouter/angularjs';
 import { routing } from './routing';
 
