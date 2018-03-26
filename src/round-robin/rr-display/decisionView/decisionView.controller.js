@@ -10,6 +10,7 @@ export class decisionViewCtrl {
 
   makeChoice(choice) {
     this.choice = choice;
-    console.log(`A choice has been made: ${this.choice.name}`);
+    this.decision.chosen = choice;
+    console.log(`A choice has been made: ${this.decision.chosen.name}`);
   }
 }

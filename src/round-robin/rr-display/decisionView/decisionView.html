@@ -1,8 +1,14 @@
 <div class="decision-view">
   <h1>Decision View</h1>
-  <choice-view
-    ng-repeat="choice in $ctrl.decision.choices"
-    choice="choice"
-    on-make-choice="$ctrl.makeChoice($event)"
-    ></choice-view>
+  <div class="row">
+    <choice-view
+      class="col-md-6"
+      ng-repeat="choice in $ctrl.decision.choices"
+      choice="choice"
+      on-make-choice="$ctrl.makeChoice($event)"
+      ></choice-view>
+  </div>
+  <div class="winning-choice" ng-if="$ctrl.decision.chosen.name">
+    <h2>Winning Choice: {{$ctrl.decision.chosen.name}}</h2>
+  </div>
 </div>
