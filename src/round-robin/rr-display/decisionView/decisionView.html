@@ -1,0 +1,8 @@
+<div class="decision-view">
+  <h1>Decision View</h1>
+  <choice-view
+    ng-repeat="choice in $ctrl.decision.choices"
+    choice="choice"
+    on-make-choice="$ctrl.makeChoice($event)"
+    ></choice-view>
+</div>

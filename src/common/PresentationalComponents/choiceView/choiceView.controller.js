@@ -3,9 +3,9 @@ export function choiceCtrl() {
     console.log(this.choice)
   }
 
-  this.decide = function(decision) {
+  this.makeChoice = function(decision) {
     console.log(decision)
-    this.onDecide({
+    this.onMakeChoice({
       $event: decision
     })
   }

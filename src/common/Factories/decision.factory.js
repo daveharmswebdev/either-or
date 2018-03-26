@@ -1,9 +1,8 @@
 export class Decision {
 
   decision() {
-    const Decision = function(choiceA, choiceB) {
-      this.choiceA = choiceA;
-      this.choiceB = choiceB;
+    const Decision = function(choices) {
+      this.choices = choices
       this.chosen = null;
     }
 

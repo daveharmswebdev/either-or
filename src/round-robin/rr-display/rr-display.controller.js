@@ -25,7 +25,7 @@ export class RRCtrl {
   }
 
   createCurrentDecision(choiceA, choiceB) {
-    this.currentDecision = new this.decision(choiceA, choiceB);
+    this.currentDecision = new this.decision([choiceA, choiceB]);
   }
 
   decide(decision) {
