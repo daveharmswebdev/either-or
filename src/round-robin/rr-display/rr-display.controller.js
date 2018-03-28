@@ -1,3 +1,5 @@
+import { createDecisions } from '../helpers/index';
+
 export class RRCtrl {
 
   constructor(RoundRobinService, Choice, Decision, Survey) {
@@ -8,19 +10,10 @@ export class RRCtrl {
     this.survey = Survey.survey();
 
     // declaring properties
-    this.choices = [];
-    this.currentDecision = {};
+    this.decisions = {};
     this.currentSurvey = {};
   }
 
-  createChoices() {
-    this.rrService.getChoices()
-    .then(({data}) => {
-      data.forEach(choice => {
-        console.log(choice.name);
-      });
-    })
-  }
 
   createCurrentDecision(choiceA, choiceB) {
     this.currentDecision = new this.decision([choiceA, choiceB]);
@@ -35,9 +28,13 @@ export class RRCtrl {
   }
 
   $onInit() {
-    this.createChoices();
-    // this.createCurrentDecision(this.choices[0], this.choices[1]);
-    // this.currentSurvey = new this.survey([this.currentDecision]);
+    this.rrService.getChoices()
+    .then(({data}) => {
+      const choices = data.map(choice => new this.choice(choice));
+      this.decisions = createDecisions(choices, this.decision);
+      console.log(choices);
+      console.log(this.decisions);
+    });
   }
 
 }

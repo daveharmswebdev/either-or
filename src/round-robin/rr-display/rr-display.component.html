@@ -1,9 +1,10 @@
 <h1>Round Robin Display</h1>
 
 <decision-view
-  decision="$ctrl.currentDecision"
+  ng-repeat="decision in $ctrl.decisions"
+  decision="decision"
   ></decision-view>
 
 
 
-<pre>{{$ctrl.currentDecision | json}}</pre>
+<pre>{{$ctrl.decisions | json}}</pre>
