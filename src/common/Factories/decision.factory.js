@@ -7,6 +7,7 @@ export class Decision {
     }
 
     Decision.prototype.decide = function (choice) {
+      console.log('factory', choice)
       this.chosen = choice;
     }
 
